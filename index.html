@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>c-programming</title>
+	</head>
+	<!-- 5 main-section, 10 p, 5 code, 5 li,  -->
+
+	<body>
+		<div class="nav">
+			<nav id="navbar">
+				<header>C-Programming</header>
+				<ul>
+					<li><a href="#Introduction" class="nav-link">Introduction</a></li>
+					<li>
+						<a href="#Setup_for_C_Programming" class="nav-link"
+							>Setup for C Programming</a
+						>
+					</li>
+					<li>
+						<a href="#C_Programming_structure" class="nav-link"
+							>C Programming structure</a
+						>
+					</li>
+					<li>
+						<a href="#How_a_Computer_Executes_a_Program" class="nav-link small"
+							>How a Computer Executes a Program</a
+						>
+					</li>
+					<li>
+						<a href="#Hello_World" class="nav-link"
+							>Hello World</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<main id="main-doc">
+			<section class="main-section" id="Introduction">
+				<header><h2>Introduction</h2></header>
+				<p>
+					This documentation attempts to teach computer programming to the
+					complete beginner using the C language. As such, it assumes you have
+					no knowledge whatsoever about programming. And if you are worried that
+					you are not good at high-school mathematics, don’t be. It is a myth
+					that you must be good at mathematics to learn programming. In this
+					documentation, knowledge of primary school mathematics is all that is
+					required—basic addition, subtraction, multiplication, division,
+					finding the percentage of some quantity, finding an average or the
+					larger of two quantities.
+				</p>
+				<p>
+					The main goal of this documentation is to teach fundamental
+					programming principles using C, one of the most widely used
+					programming languages in the world today. C is considered a ‘modern’
+					language even though its roots date back to the 1970s. Originally, C
+					was designed for writing ‘systems’ programs—things like operating
+					systems, editors, compilers, assemblers and input/ output utility
+					programs. But, today, C is used for writing all kinds of applications
+					programs as well—word processing programs, spreadsheet programs,
+					database management programs, accounting programs, games, educational
+					software—the list is endless.
+				</p>
+			</section>
+			<section class="main-section" id="Setup_for_C_Programming">
+				<header><h2>Setup for C Programming</h2></header>
+				<p>
+					Well, In order to write our first C programing code we can use any
+					text edtior even our default notepad in Computers. Although default
+					notepad is an option but to make our life easy we can use Code-Block
+					application which have so many cool options, and helps us to write our
+					code faster.
+				</p>
+				<p></p>
+				<h3>Steps to setup Code-Block</h3>
+				<ol>
+					<li>
+						Goto http://www.codeblocks.org/downloads. Click "Download the binary
+						release". Select your operating platform (e.g., Windows
+						2000/XP/Vista/7). Download the installer with GCC Compiler, e.g.,
+						codeblocks-13.12mingw-setup.exe (98 MB) (which includes MinGW's GNU
+						GCC compiler and GNU GDB debugger).
+					</li>
+					<li>Run the downloaded installer. Accept the default options.</li>
+				</ol>
+				<ul>
+					<li>
+						<b>Verify the Compiler's and Debugger's Path</b>: (For CodeBlocks
+						13.12 For Windows) Goto "Settings" menu ⇒ "Compiler..." ⇒ In
+						"Selected Compiler", choose "GNU GCC Compiler" ⇒ Select tab
+						"Toolchain Executables" ⇒ Check the "Compiler's Installation
+						Directory". It shall be set to the "MinGW" sub-directory of the
+						CodeBlocks installation directory, for example, suppose that
+						CodeBlocks is installed in "c:\Program Files\codeblocks", set it to
+						"c:\Program Files\codeblocks\MinGW".
+					</li>
+					<li>
+						Similarly, check the debugger's path. Goto "Settings" menu ⇒
+						"Debugger..." ⇒ Expand "GDB/CDB debugger" ⇒ Select "Default" ⇒ In
+						"Executable path", provide the full-path name of "gdb.exe", for
+						example, "c:\Program Files\codeblocks\MinGW\bin\gdb.exe".
+					</li>
+				</ul>
+				<code></code>
+			</section>
+			<section class="main-section" id="C_Programming_structure">
+				<header><h2>C programming structure</h2></header>
+				<code class="code"
+					>#include &lt;stdio.h&gt;<br />
+					int main() {<br />
+					int a, s;<br />
+					printf("Enter length of side: ");<br />
+					scanf("%d", &s); //store length in s<br />
+					a = s * s; //calculate area; store in a<br />
+					printf("\nArea of square is %d\n", a);<br />
+					}</code
+				>
+				<p>
+					It is not too important that you understand anything about this
+					program at this time.
+				</p>
+				<ul>
+					<li>
+						But you can observe that a C program has something (a function)
+						called main followed by opening and closing brackets.
+					</li>
+					<li>
+						Between the left brace { and the right brace } we have what is
+						called the body of the function.
+					</li>
+					<li>
+						The statement |<code>int a, s;</code>| is called a declaration.
+					</li>
+					<li>
+						The parts after // are comments that help to explain the program but
+						have no effect when the program is run.
+					</li>
+					<li>And * is used to denote multiplication.</li>
+					<p>
+						All of these terms will be explained in detail in due
+						course.Finally, a program written in a high-level language is
+						usually referred to as a source program or source code.
+					</p>
+				</ul>
+			</section>
+			<section class="main-section" id="How_a_Computer_Executes_a_Program">
+				<header><h2>How a Computer Executes a Program</h2></header>
+				<p>
+					First, recall that a computer can execute a program written in machine
+					language only. For the computer to execute the instructions of such a
+					program, those instructions must be loaded into the computer’s memory
+					(also called primary storage), like this:
+				</p>
+				<table>
+					<tr>
+						<th>memory</th>
+					</tr>
+					<tr>
+						<td>instruction 1</td>
+					</tr>
+					<tr>
+						<td>instruction 2</td>
+					</tr>
+					<tr>
+						<td>instruction 3</td>
+					</tr>
+					<tr>
+						<td>etc.</td>
+					</tr>
+				</table>
+				<p>
+					You can think of memory as a series of storage locations, numbered
+					consecutively starting at 0. Thus you can speak of memory location 27
+					or memory location 31548. The number associated with a memory location
+					is called its address.
+				</p>
+				<p>
+					A computer runs a program by executing its first instruction, then the
+					second, then the third, and so on. It is possible that one instruction
+					might say to jump over several instructions to a particular one and
+					continue executing from there. Another might say to go back to a
+					previous instruction and execute it again.
+				</p>
+				<p>
+					No matter what the instructions are, the computer faithfully executes
+					them exactly as specified. That is why it is so important that
+					programs specify precisely and exactly what must be done. The computer
+					cannot know what you intend, it can only execute what you actually
+					write. If you give the computer the wrong instruction, it will blindly
+					execute it just as you specify.
+				</p>
+			</section>
+			<section class="main-section" id="Hello_World">
+				<header><h2>Hello World</h2></header>
+				<code
+					>#include &lt;stdio.h&gt;<br />
+					int main() {<br />
+					printf("Welcome to Trinidad & Tobago");<br />
+					}</code
+				>
+				<p>
+					The statement
+					<code>#include &lt;stdio.h&gt;</code><br>
+					is called a compiler directive. This simply means that it
+					providesinformation the compiler needs to compile your program. In
+					C,input/output instructions are provided by means of standard
+					functionsstored in a standard library. These functions use variable
+					(and other)declarations stored in a special header file called
+					stdio.h. Any program that uses an input/output instruction (such as
+					printf) mustinform the compiler to include the declarations in the
+					file stdio.hwith the program. If this is not done, the compiler will
+					not know howto interpret the input/output statements used in the
+					program
+				</p>
+				<p>
+					A C program consists of one or more functions (or, subprograms), one
+					of which must be called main. Our solution consists of just one
+					function so it must be called main. The (round) brackets after main
+					are necessary because, in C, a function name is followed by a list of
+					arguments, enclosed in brackets. If there are no arguments, the
+					brackets must still be present. Here, main has no arguments so the
+					brackets alone are present. The word int before main indicate the
+					typeof value returned by main. We will explain this in more detail
+					later.
+				</p>
+				<p>
+					Every function has a section called the body of the function. The body
+					is where the work of the function is performed. The left and right
+					braces, { and }, are used to define the start and end, respectively,
+					of the body. In C, one or more statements enclosed by { and } is
+					called a block or compound statement.
+				</p>
+				<p>body of main contains one statement:</p>
+				<code>printf("Welcome to Trinidad & Tobago");</code>
+				<p>
+					printf is a standard output function that, in this example, takes one
+					argument, a string constant "Welcome to Trinidad & Tobago". Note that,
+					as with all functions, the argument is enclosed in round brackets. The
+					semicolon is used to indicate the end of the statement. We say the
+					semicolon terminates the statement. When executed, this statement will
+					print
+				</p>
+				<code>Welcome to Trinidad & Tobago</code>
+			</section>
+		</main>
+	</body>
+</html>
